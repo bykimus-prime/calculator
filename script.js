@@ -1,4 +1,9 @@
-
+let a = prompt('please enter first number:');
+let b = prompt('please enter second number:');
+let c = prompt('Which operator do you want to use? (+, -, *, /):');
+let num1 = parseInt(a);
+let num2 = parseInt(b);
+let operator = c;
 
 // arithmetic functions
 function add(num1, num2) {
@@ -24,14 +29,32 @@ function divide(num1, num2) {
     } else return divideValue;
 }
 
-const power = function (num1, num2) {
-    return num1 ** num2;
-};
+// const power = function (num1, num2) {
+//     return num1 ** num2;
+// };
 
-const sum = function (array) {
-    return array.reduce((total, current) => total + current, 0);
-};
+// const sum = function (array) {
+//     return array.reduce((total, current) => total + current, 0);
+// };
 
-function operate() {
-
+// operator function to determine which operator to call
+function operate(operator, num1, num2) {
+    switch (operator) {
+        case '+':
+            add(num1, num2);
+            break;
+        case '-':
+            subtract(num1, num2);
+            break;
+        case '*':
+            multiply(num1, num2);
+            break;
+        case '/':
+            divide(num1, num2);
+            break;
+        default:
+            alert('Error! No/incorrect operator chosen');
+    }
 }
+
+operate(operator, num1, num2);
