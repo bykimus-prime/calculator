@@ -61,7 +61,12 @@ button {
     color: black;
 }
 
-#zeroBtn {
+#equalsBtn {
+    grid-row: 6/8;
+    grid-column: 4;
+}
+
+#clearBtn {
     grid-column: span 2;
 }
 
