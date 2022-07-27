@@ -39,24 +39,24 @@ main {
 
 #displayArea {
     grid-column: 1 / -1;
-    background-color: #b2b9b7;
+    background-color: lightsteelblue;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-end;
-    padding: 5px;
-    font-size: 5.5em;
+    padding: 10px;
+    font-size: 60px;
     font-weight: initial;
-    text-shadow: 1.3px 1.3px #383838;
+    text-shadow: 1.2px 1.2px #383838;
     margin: 5px;
 }
 
 button {
     margin: 1px;
-    border-radius: 5%;
+    border-radius: 5px;
     border: none;
     font-weight: initial;
-    font-size: 2em;
+    font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
     color: black;
 }
@@ -64,10 +64,16 @@ button {
 #equalsBtn {
     grid-row: 6/8;
     grid-column: 4;
+    background-color: lightblue;
 }
 
 #clearBtn {
     grid-column: span 2;
+    background-color: lightcoral;
+}
+
+.operator {
+    background-color: lightgreen
 }
 
 footer {
