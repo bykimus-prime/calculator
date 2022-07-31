@@ -44,6 +44,7 @@ main {
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-end;
+    height: 90px;
     padding: 10px;
     font-size: 60px;
     font-weight: initial;
