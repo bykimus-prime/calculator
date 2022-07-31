@@ -39,7 +39,7 @@ main {
 
 #displayArea {
     grid-column: 1 / -1;
-    background-color: lightsteelblue;
+    background-color: #b2b9b7;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -69,6 +69,10 @@ button {
 
 #clearBtn {
     grid-column: span 2;
+    background-color: lightcoral;
+}
+
+#backspaceBtn {
     background-color: lightcoral;
 }
 
