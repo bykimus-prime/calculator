@@ -109,6 +109,44 @@ function calcFactory() {
         })
     }
 
+    function getOperatorChoice() {
+        const operatorBtns = document.querySelectorAll('.operator');
+        operatorBtns.forEach((button) => {
+            button.addEventListener('click', () => {
+                console.log('get operator');
+                operator = button.getAttribute('value');
+                console.log(operator);
+                tempOperatorArray.push(operator);
+                console.log('store temp operator in array for multiple calcs: ', tempOperatorArray);
+
+                if ((tempNum1Array != '') && (tempNum2Array != '')) {
+                    const calcDisp = document.getElementById('displayArea');
+                    num1 = tempNum1Array.join('');
+                    num2 = tempNum2Array.join('');
+                    num1 = parseFloat(num1);
+                    num2 = parseFloat(num2);
+                    let tempOperator = tempOperatorArray[tempOperatorArray.length - 2].toString();
+                    console.log('running string calculation');
+                    operate(tempOperator, num1, num2);
+                    let tempStringValue = calcDisp.textContent;
+                    console.log('temp string value: ', tempStringValue);
+                    console.log('clearing out arrays and nums');
+                    tempNum1Array = [];
+                    tempNum2Array = [];
+                    num1 = 0;
+                    num2 = 0;
+                    console.log('array 1: ', tempNum1Array);
+                    console.log('array 2: ', tempNum2Array);
+                    console.log('num1: ', num1);
+                    console.log('num2: ', num2);
+                    tempNum1Array.push(tempStringValue);
+                    num1 = tempNum1Array.join('');
+                    console.log('pushed string value to array 1: ', tempNum1Array);
+                }
+            })
+        })
+    }
+
     function calculate() {
         const equalsBtn = document.getElementById('equalsBtn');
         equalsBtn.addEventListener('click', () => {
@@ -127,6 +165,7 @@ function calcFactory() {
 
     // call and run the sub-functions
     getNumberInput();
+    getOperatorChoice();
     calculate();
 }
 
