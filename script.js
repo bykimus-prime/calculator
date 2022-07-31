@@ -170,8 +170,8 @@ function calcFactory() {
     })
 
     // dom event for negative sign button
-    const negNumSign = document.getElementById('negNumSign');
-    negNumSign.addEventListener('click', () => {
+    const negNumBtn = document.getElementById('negNumBtn');
+    negNumBtn.addEventListener('click', () => {
 
         // appends +/- to numarray1/2 and displays
         if (operator == '') {
@@ -191,6 +191,7 @@ function calcFactory() {
         }
     })
 
+    // dom event for decimal button
     const decimalBtn = document.getElementById('decimalBtn');
     decimalBtn.addEventListener('click', () => {
         console.log('decimal activated');
