@@ -164,6 +164,28 @@ function calcFactory() {
     clearBtn.addEventListener('click', () => { location.reload();
     })
 
+    // dom event for negative sign button
+    const negNumSign = document.getElementById('negNumSign');
+    negNumSign.addEventListener('click', () => {
+
+        // appends +/- to numarray1/2 and displays
+        if (operator == '') {
+            const calcDisp = document.getElementById('displayArea');
+            console.log('negative button activated');
+            tempNum1Array.splice(0, 1, (tempNum1Array[0] * -1).toString());
+            console.log('append array with negative number: ', tempNum1Array);
+            num1 = tempNum1Array.join('');
+            calcDisp.textContent = num1;
+        } else {
+            const calcDisp = document.getElementById('displayArea');
+            console.log('negative button activated for num2');
+            tempNum2Array.splice(0, 1, (tempNum2Array[0] * -1).toString());
+            console.log('append array with negative number for num2: ', tempNum2Array);
+            num2 = tempNum2Array.join('');
+            calcDisp.textContent = num2;
+        }
+    })
+
     // call and run the sub-functions
     getNumberInput();
     getOperatorChoice();
