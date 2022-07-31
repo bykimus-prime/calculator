@@ -1,9 +1,7 @@
-// let a = prompt('please enter first number:');
-// let b = prompt('please enter second number:');
-// let c = prompt('Which operator do you want to use? (+, -, *, /):');
-// let num1 = parseInt(a);
-// let num2 = parseInt(b);
-// let operator = c;
+// global variables
+let num1 = 0;
+let num2 = 0;
+let operator = '';
 
 // arithmetic functions
 function add(num1, num2) {
