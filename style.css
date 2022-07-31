@@ -64,6 +64,10 @@ button {
 #equalsBtn {
     grid-row: 6/8;
     grid-column: 4;
+    background-color: lightskyblue;
+}
+
+#equalsBtn:active {
     background-color: lightblue;
 }
 
@@ -76,8 +80,25 @@ button {
     background-color: lightcoral;
 }
 
+#clearBtn:active,
+#backspaceBtn:active {
+    background-color: lightpink;
+}
+
 .operator {
     background-color: lightgreen
+}
+
+.operator:focus {
+    background-color: lightyellow;
+}
+
+.operand {
+    background-color: lightgrey;
+}
+
+.operand:active {
+    background-color: whitesmoke;
 }
 
 footer {
