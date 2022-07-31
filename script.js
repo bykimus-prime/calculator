@@ -120,6 +120,11 @@ function calcFactory() {
         })
     }
 
+    // clear button reloads the page
+    const clearBtn = document.getElementById('clearBtn');
+    clearBtn.addEventListener('click', () => { location.reload();
+    })
+
     // call and run the sub-functions
     getNumberInput();
     calculate();
