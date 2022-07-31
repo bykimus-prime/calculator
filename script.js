@@ -120,6 +120,11 @@ function calcFactory() {
                 tempOperatorArray.push(operator);
                 console.log('store temp operator in array for multiple calcs: ', tempOperatorArray);
 
+                // enable decimal button if disabled from previous use
+                document.getElementById('decimal').disabled = false;
+                console.log('decimal button is enabled');
+
+                // check if multi operand string exists and needs to be calculated
                 if ((tempNum1Array != '') && (tempNum2Array != '')) {
                     const calcDisp = document.getElementById('displayArea');
                     num1 = tempNum1Array.join('');
@@ -183,6 +188,34 @@ function calcFactory() {
             console.log('append array with negative number for num2: ', tempNum2Array);
             num2 = tempNum2Array.join('');
             calcDisp.textContent = num2;
+        }
+    })
+
+    const decimalBtn = document.getElementById('decimalBtn');
+    decimalBtn.addEventListener('click', () => {
+        console.log('decimal activated');
+        let decimalBtn = '.';
+        const calcDisp = document.getElementById('displayArea');
+
+        // appends decimal to numarray1/2 and displays
+        if (operator == '') {
+            const calcDisp = document.getElementById('displayArea');
+            console.log('desimal button registered', decimalBtn);
+            tempNum1Array.push(decimalBtn);
+            console.log('append array1 with decimal: ', tempNum1Array);
+            num1 = tempNum1Array.join('');
+            calcDisp.textContent = num1;
+            document.getElementById('decimalBtn').disabled = true;
+            console.log('num1 decimal button disabled');
+        } else {
+            const calcDisp = document.getElementById('displayArea');
+            console.log('desimal button registered', decimalBtn);
+            tempNum2Array.push(decimalBtn);
+            console.log('append array2 with decimal: ', tempNum2Array);
+            num2 = tempNum2Array.join('');
+            calcDisp.textContent = num2;
+            document.getElementById('decimalBtn').disabled = true;
+            console.log('num2 decimal button disabled');
         }
     })
 
