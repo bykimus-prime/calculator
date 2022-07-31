@@ -6,33 +6,39 @@ let operator = '';
 // arithmetic functions
 function add(num1, num2) {
     let addValue = (num1 + num2);
-    let rounded = Math.round((addValue + Number.EPSILON) * 100) / 100;
-    rounded = rounded.toFixed(2);
-    return addValue;
+    let roundedValue = Math.round((addValue + Number.EPSILON) * 100) / 100;
+    roundedValue = roundedValue.toFixed(2);
+    const calcDisp = document.getElementById('displayArea');
+    calcDisp.textContent = rounded;
 };
 
 function subtract(num1, num2) {
     let subtractValue = (num1 - num2);
-    let rounded = Math.round((subtractValue + Number.EPSILON) * 100) / 100;
-    rounded = rounded.toFixed(2);
-    return subtractValue;
+    let roundedValue = Math.round((subtractValue + Number.EPSILON) * 100) / 100;
+    roundedValue = roundedValue.toFixed(2);
+    const calcDisp = document.getElementById('displayArea');
+    calcDisp.textContent = rounded;
 };
 
 function multiply(num1, num2) {
     let multiplyValue = (num1 * num2);
-    let rounded = Math.round((multiplyValue + Number.EPSILON) * 100) / 100;
-    rounded = rounded.toFixed(2);
-    return multiplyValue;
+    let roundedValue = Math.round((multiplyValue + Number.EPSILON) * 100) / 100;
+    roundedValue = roundedValue.toFixed(2);
+    const calcDisp = document.getElementById('displayArea');
+    calcDisp.textContent = rounded;
 };
 
 function divide(num1, num2) {
     let divideValue = (num1 / num2);
-    let rounded = Math.round((divideValue + Number.EPSILON) * 100) / 100;
-    rounded = rounded.toFixed(2);
 
     if (divideValue == "Infinity") {
         return alert('Error! Can\'t divide by zero. You know the drill.');
-    } else return divideValue;
+    } else {
+        let roundedValue = Math.round((divideValue + Number.EPSILON) * 100) / 100;
+        roundedValue = roundedValue.toFixed(2);
+        const calcDisp = document.getElementById('displayArea');
+        calcDisp.textContent = rounded;
+    }
 };
 
 // const power = function (num1, num2) {
