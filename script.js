@@ -5,33 +5,34 @@ let tempNum1Array = [];
 let tempNum2Array = [];
 let savedFirstValue = 0;
 let operator = '';
+let tempOperatorArray = [];
 
 // arithmetic functions
 function add(num1, num2) {
     let addValue = (num1 + num2);
     let roundedValue = Math.round((addValue + Number.EPSILON) * 100) / 100;
     roundedValue = roundedValue.toFixed(2);
-    console.log('add', rounded);
+    console.log('add', roundedValue);
     const calcDisp = document.getElementById('displayArea');
-    calcDisp.textContent = rounded;
+    calcDisp.textContent = roundedValue;
 };
 
 function subtract(num1, num2) {
     let subtractValue = (num1 - num2);
     let roundedValue = Math.round((subtractValue + Number.EPSILON) * 100) / 100;
     roundedValue = roundedValue.toFixed(2);
-    console.log('subtract', rounded);
+    console.log('subtract', roundedValue);
     const calcDisp = document.getElementById('displayArea');
-    calcDisp.textContent = rounded;
+    calcDisp.textContent = roundedValue;
 };
 
 function multiply(num1, num2) {
     let multiplyValue = (num1 * num2);
     let roundedValue = Math.round((multiplyValue + Number.EPSILON) * 100) / 100;
     roundedValue = roundedValue.toFixed(2);
-    console.log('multiply', rounded);
+    console.log('multiply', roundedValue);
     const calcDisp = document.getElementById('displayArea');
-    calcDisp.textContent = rounded;
+    calcDisp.textContent = roundedValue;
 };
 
 function divide(num1, num2) {
@@ -42,9 +43,9 @@ function divide(num1, num2) {
     } else {
         let roundedValue = Math.round((divideValue + Number.EPSILON) * 100) / 100;
         roundedValue = roundedValue.toFixed(2);
-        console.log('divide', rounded);
+        console.log('divide', roundedValue);
         const calcDisp = document.getElementById('displayArea');
-        calcDisp.textContent = rounded;
+        calcDisp.textContent = roundedValue;
     }
 };
 
