@@ -91,6 +91,7 @@ function calcFactory() {
                 console.log(savedFirstValue);
                 const calcDisp = document.getElementById('displayArea');
 
+                // append to num1/num2 if multiple numbers pressed then display
                 if (operator == '') {
                     tempNum1Array.push(savedFirstValue);
                     console.log('show the array1', tempNum1Array);
@@ -105,6 +106,17 @@ function calcFactory() {
                     calcDisp.textContent = num2;
                 }
             })
+        })
+    }
+
+    function calculate() {
+        const equalsBtn = document.getElementById('equalsBtn');
+        equalsBtn.addEventListener('click', () => {
+            console.log('do the math', num1, num2, operator);
+            const calcDisp = document.getElementById('displayArea');
+            num1 = parseFloat(num1);
+            num2 = parseFloat(num2);
+            operate(operator, num1, num2);
         })
     }
 }
