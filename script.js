@@ -119,4 +119,11 @@ function calcFactory() {
             operate(operator, num1, num2);
         })
     }
+
+    // call and run the sub-functions
+    getNumberInput();
+    calculate();
 }
+
+// call and run the main function
+calcFactory();
