@@ -7,6 +7,22 @@ let savedFirstValue = 0;
 let operator = '';
 let tempOperatorArray = [];
 
+const clearBtn = document.getElementById('clearBtn');
+
+clearBtn.addEventListener('click', clear);
+
+function clear() {
+    num1 = 0;
+    num2 = 0;
+    tempNum1Array = [];
+    tempNum2Array = [];
+    savedFirstValue = 0;
+    operator = '';
+    tempStringValue = '';
+    tempOperatorArray = [];
+    displayArea.textContent = 0;
+}
+
 // arithmetic functions
 function add(num1, num2) {
     let addValue = (num1 + num2);
@@ -164,10 +180,10 @@ function calcFactory() {
         })
     }
 
-    // clear button reloads the page
-    const clearBtn = document.getElementById('clearBtn');
-    clearBtn.addEventListener('click', () => { location.reload();
-    })
+    // // clear button reloads the page
+    // const clearBtn = document.getElementById('clearBtn');
+    // clearBtn.addEventListener('click', () => { location.reload();
+    // })
 
     // dom event for negative sign button
     const negNumBtn = document.getElementById('negNumBtn');
