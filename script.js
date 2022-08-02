@@ -180,11 +180,6 @@ function calcFactory() {
         })
     }
 
-    // // clear button reloads the page
-    // const clearBtn = document.getElementById('clearBtn');
-    // clearBtn.addEventListener('click', () => { location.reload();
-    // })
-
     // dom event for negative sign button
     const negNumBtn = document.getElementById('negNumBtn');
     negNumBtn.addEventListener('click', () => {
