@@ -137,7 +137,7 @@ function calcFactory() {
                 console.log('store temp operator in array for multiple calcs: ', tempOperatorArray);
 
                 // enable decimal button if disabled from previous use
-                document.getElementById('decimal').disabled = false;
+                document.getElementById('decimalBtn').disabled = false;
                 console.log('decimal button is enabled');
 
                 // check if multi operand string exists and needs to be calculated
