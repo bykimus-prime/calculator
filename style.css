@@ -27,7 +27,6 @@ main {
 #calculatorBody {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: minmax(1fr, auto) repeat(6, 1fr);
     gap: 2px;
     height: 500px;
     width: 400px;
@@ -44,7 +43,6 @@ main {
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-end;
-    height: 90px;
     padding: 10px;
     font-size: 60px;
     font-weight: initial;
